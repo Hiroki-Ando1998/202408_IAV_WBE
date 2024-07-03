@@ -21,7 +21,7 @@ data_2_0 <- select(Data_CA, collection_date, IAV_0, IAV_Nor_0, IAV_day, IAV_cas_
 colnames(data_2_7) <- c("collection_date", "IAV", "IAV_normalized", "IAV_day", "IAV_day_av")
 data_2 <- data_2_7
 
-#data名変える(移動平均)
+#data名変える
 data_lead <- mutate(data_2, IAV_1 = lag(IAV, 1), IAV_2 = lag(IAV, 2), IAV_3 = lag(IAV, 3), IAV_4 = lag(IAV, 4), IAV_5 = lag(IAV, 5), IAV_6 = lag(IAV, 6), IAV_7 = lag(IAV, 7), IAV_8 = lag(IAV, 8))
 data_behind <- mutate(data_2, IAV_1 = lead(IAV, 1), IAV_2 = lead(IAV, 2),IAV_3 = lead(IAV, 3), IAV_4 = lead(IAV, 4), IAV_5 = lead(IAV, 5))
 
