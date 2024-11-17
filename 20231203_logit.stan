@@ -28,8 +28,8 @@ parameters {
 // 'y' to be normally distributed with mean 'mu'
 // and standard deviation 'sigma'.
 model {
-  intercept ~ uniform(0, 10);
-  c1 ~ uniform(0, 100);
+  intercept ~ normal(0, 100);
+  c1 ~ normal(0, 100);
 
   vector[n] x1;
   vector[n] x2;
